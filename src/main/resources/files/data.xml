@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type='text/xsl' href='01GTKT2_001.xsl'?>
+<inv:invoice xmlns:inv="http://laphoadon.gdt.gov.vn/2015/09/invoicexml/v1" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+	<inv:invoiceData id="17279">
+	<inv:sellerAppRecordId>17279</inv:sellerAppRecordId>
+	<inv:invoiceAppRecordId>17279</inv:invoiceAppRecordId>
+	<inv:type>01GTKT</inv:type>
+	<inv:templateCode>01GTKT2/001</inv:templateCode>
+	<inv:series>AD/20E</inv:series>
+	<inv:invoiceNo>0000001</inv:invoiceNo>
+	<inv:name>Hóa đơn giá trị gia tăng</inv:name>
+	<inv:issuedDate>2020-02-07T16:09:24</inv:issuedDate>
+	<inv:signedDate>2020-02-07T16:13:18</inv:signedDate>
+	<inv:submittedDate>2020-02-07T16:13:18</inv:submittedDate>
+	<inv:currencyCode>USD</inv:currencyCode>
+	<inv:exchangeRate>1</inv:exchangeRate>
+	<inv:note>SIGN</inv:note>
+	<inv:adjustmentType>3</inv:adjustmentType>
+	<inv:originalCertifiedId>11215810S598163B70</inv:originalCertifiedId>
+	<inv:originalInvoiceNo>0000002</inv:originalInvoiceNo>
+	<inv:originalSeries>AC/20E</inv:originalSeries>
+	<inv:diendai>test</inv:diendai>
+	<inv:originalTemplateCode>01GTKT2/002</inv:originalTemplateCode>
+	<inv:additionalReferenceDesc/>
+	<inv:additionalReferenceDate>2020-02-07</inv:additionalReferenceDate>
+	<inv:sellerLegalName>Ngân Hàng zzz Sumitomo Mitsui</inv:sellerLegalName>
+	<inv:sellerTaxCode>0100233583</inv:sellerTaxCode>
+	<inv:sellerFaxNumber>11111111</inv:sellerFaxNumber>
+	<inv:sellerAddressLine>12th Floor, Lotte Center Hanoi, 54 Lieu Giai Street, Cong Vi Ward, Ba Dinh District, Hanoi</inv:sellerAddressLine>
+	<inv:sellerPhoneNumber>(84-4) 942 4181</inv:sellerPhoneNumber>
+	<inv:contactPersonName>Phạm Quang Trung</inv:contactPersonName>
+	<inv:buyerCode/>
+	<inv:transferdate>2020-02-07T16:09:24</inv:transferdate>
+	<inv:buyerDisplayName>NGUYỄN THỊ THỦY 2</inv:buyerDisplayName>
+	<inv:buyerLegalName/>
+	<inv:buyerTaxCode/>
+	<inv:buyerAddressLine/>
+	<inv:buyerPhoneNumber/>
+	<inv:buyerEmail/>
+	<inv:totalAmountWithoutVat>56000.000</inv:totalAmountWithoutVat>
+	<inv:totalVatAmount>5600.000</inv:totalVatAmount>
+	<inv:totalAmountWithVat>61600.000</inv:totalAmountWithVat>
+	<inv:totalAmountWithVatFrn>61600.000</inv:totalAmountWithVatFrn>
+	<inv:totalAmountWithVatInWords>Sáu mươi mốt nghìn sáu trăm Việt Nam đồng</inv:totalAmountWithVatInWords>
+	<inv:totalAmountPos>true</inv:totalAmountPos>
+	<inv:totalAmountWithoutVatPos>true</inv:totalAmountWithoutVatPos>
+	<inv:totalVatAmountPos>true</inv:totalVatAmountPos>
+	<inv:discountAmountPos>false</inv:discountAmountPos>
+	<inv:sellerCreatedInvoicePersonName/>
+	<inv:items>
+		<inv:item>
+			<inv:lineNumber>1</inv:lineNumber>
+			<inv:code>itemCode</inv:code>
+			<inv:name>Hàng hóa</inv:name>
+			<inv:quantity/>
+			<inv:totalAmountWithoutVat>56000.000</inv:totalAmountWithoutVat>
+			<inv:vatCategoryPercentage>10</inv:vatCategoryPercentage>
+			<inv:vatAmount>10</inv:vatAmount>
+			<inv:unitPrice/>
+			<inv:itemTotalAmount>56000.000</inv:itemTotalAmount>
+			<inv:exchangeRate>11110</inv:exchangeRate>
+			<inv:tranref/>
+		</inv:item>
+		<inv:item>
+			<inv:lineNumber>1</inv:lineNumber>
+			<inv:code>itemCode</inv:code>
+			<inv:name>Hàng hóa</inv:name>
+			<inv:quantity/>
+			<inv:totalAmountWithoutVat>56000.000</inv:totalAmountWithoutVat>
+			<inv:vatCategoryPercentage>-1</inv:vatCategoryPercentage>
+			<inv:vatAmount>10</inv:vatAmount>
+			<inv:unitPrice/>
+			<inv:itemTotalAmount>56000.000</inv:itemTotalAmount>
+			<inv:exchangeRate>0</inv:exchangeRate>
+			<inv:tranref/>
+		</inv:item>
+	</inv:items>
+	<inv:taxBreakDowns/>
+	<inv:payments>
+		<inv:payment>
+			<inv:name>Chuyển khoản</inv:name>
+		</inv:payment>
+	</inv:payments>
+</inv:invoiceData>
+	<inv:controlData>
+		<inv:systemCode>VN0010246</inv:systemCode>
+	</inv:controlData>
+</inv:invoice>
