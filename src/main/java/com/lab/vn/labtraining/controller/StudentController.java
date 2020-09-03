@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,10 +30,6 @@ import org.springframework.web.multipart.MultipartFile;
 import com.lab.vn.labtraining.model.Student;
 import com.lab.vn.labtraining.services.StudentServices;
 
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
-
-@EnableSwagger2
-//@Controller
 @RestController
 public class StudentController {
 
@@ -40,6 +37,7 @@ public class StudentController {
 	StudentServices st;
 
 	// PostMapping dùng cho clear, thay thế cho RequestMapping
+//	@Secured({ "ROLE_ADMIN", "ROLE_USER" })
 	@PostMapping("/api/addStudentDefault/ex1")
 	@ResponseBody
 	public Student addStudentExOne(Student student) {
@@ -53,6 +51,7 @@ public class StudentController {
 		return student;
 	}
 
+	@Secured("ROLE_USER")
 	@GetMapping("/api/findStudentById/ex1/{id}")
 	@ResponseBody
 	// @PathVariable thuong su dung mac dinh ko can khai bao
@@ -60,6 +59,8 @@ public class StudentController {
 		return st.findById(id);
 	}
 
+//	@RolesAllowed("ROLE_TUANCUON")
+	@Secured("ROLE_TUANCUON")
 	@GetMapping(path = "/api/getAllStudent", produces = { MediaType.APPLICATION_XML_VALUE,
 			MediaType.APPLICATION_JSON_VALUE })
 	@ResponseBody
@@ -103,7 +104,7 @@ public class StudentController {
 			e.printStackTrace();
 		}
 	}
-	
+
 	@PostMapping("/api/downloadFile")
 	@ResponseBody
 	public void downloadFile(HttpServletResponse response) {
@@ -117,12 +118,12 @@ public class StudentController {
 		try {
 			File file = ResourceUtils.getFile(fileSource);
 			byte[] data = FileUtils.readFileToByteArray(file);
-		      // Thiết lập thông tin trả về
-		      response.setContentType("application/octet-stream");
-		      response.setHeader("Content-disposition", "attachment; filename=" + file.getName());
-		      response.setContentLength(data.length);
-		      InputStream inputStream = new BufferedInputStream(new ByteArrayInputStream(data));
-		      FileCopyUtils.copy(inputStream, response.getOutputStream());
+			// Thiết lập thông tin trả về
+			response.setContentType("application/octet-stream");
+			response.setHeader("Content-disposition", "attachment; filename=" + file.getName());
+			response.setContentLength(data.length);
+			InputStream inputStream = new BufferedInputStream(new ByteArrayInputStream(data));
+			FileCopyUtils.copy(inputStream, response.getOutputStream());
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -130,6 +131,6 @@ public class StudentController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 	}
 }
